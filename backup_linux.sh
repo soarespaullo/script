@@ -1,6 +1,25 @@
 #!/bin/bash
-# Script de Backup com TAR
-# By: @soarespaullo
+# #############################################################################
+# Nome: backup_linux.sh
+#
+# Autor: Paulo Soares (soarespaullo@proton.me)
+# Data de Criação: 10/04/2025
+# Última Atualização: 10/05/2025
+# Versão: 1.0
+#
+# Uso:
+#   chmod +x backup_linux.sh   # Torna o script executável
+#   ./backup_linux.sh          # Executa o script
+#
+# Requisitos:
+#   - Bash shell
+#   - Utilitário tar
+#
+# Histórico de Alterações:
+#   v1.0 - 10/10/2023 - Criação inicial do script.
+#
+# Licença: GPL
+# #############################################################################
 
 # Definição de cores para saída no terminal
 VERDE="\e[32m"

@@ -1,25 +1,29 @@
 #!/bin/bash
-# #############################################################################
+##############################################################################
 # Nome: backup_linux.sh
 #
+# Descrição:
+#   Este script realiza o backup de um diretório informado pelo usuário utilizando
+#   tar e gzip. Possui seleção interativa dos diretórios de origem e destino,
+#   valida se o destino existe (podendo criá-lo se necessário), exibe banners e
+#   mensagens coloridas no terminal e utiliza o "pv" para exibir uma barra de
+#   progresso durante o backup.
+#
 # Autor: Paulo Soares (soarespaullo@proton.me)
-# Data de Criação: 10/04/2025
-# Última Atualização: 10/05/2025
+# Data de Criação: 02/05/2025
 # Versão: 1.0
 #
 # Uso:
-#   chmod +x backup_linux.sh   # Torna o script executável
-#   ./backup_linux.sh          # Executa o script
+#   chmod +x backup_interativo.sh   # Torna o script executável
+#   ./backup_linux.sh               # Executa o script
 #
 # Requisitos:
-#   - Bash shell
-#   - Utilitário tar
+#   - Bash Shell
+#   - tar
+#   - gzip
+#   - pv  (pipe viewer) instalado
 #
-# Histórico de Alterações:
-#   v1.0 - 10/10/2023 - Criação inicial do script.
-#
-# Licença: GPL
-# #############################################################################
+##############################################################################
 
 # Definição de cores para saída no terminal
 VERDE="\e[32m"

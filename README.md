@@ -1,18 +1,12 @@
-# script
-Script de backup em Bash para Sistema Linux
+# Como Funciona o Script
+**Banner e Cores**: Ao iniciar, o script exibe um banner colorido e informativo, definindo o tom para um backup seguro e automatizado.
 
-- Aqui está um script de backup em Bash para Linux que inclui:
+**Verificação do PV**: O script verifica se o utilitário `pv` está instalado e, se não estiver, atualiza os repositórios e instala-o. Essa etapa é vital para a exibição da barra de progresso.
 
-- Definição da origem e do destino
+**Entrada Interativa com Auto-Complete**: Utilizando `read -e`, o Bash permite que você use a tecla TAB para auto completar caminhos de diretórios, facilitando a seleção.
 
-- Criação do destino caso não exista
+**Validações e Criação do Diretório de Destino**: Ele valida se o diretório de origem existe e, se o destino não existir, o cria automaticamente. Em seguida, checa se há espaço disponível suficiente no destino.
 
-- Exibição de um banner estilizado
+**Backup com Barra de Progresso**: Após calcular o tamanho total da origem, o comando `tar` é executado em conjunto com `pv` para exibir uma barra de progresso enquanto o backup é compactado com `gzip`.
 
-- Uso de cores no terminal
-
-- Barra de progresso com pv
-
-- Verificação e instalação do pv caso não esteja instalado
-
-- Checagem de espaço disponível no diretório de destino antes de iniciar o backup
+**Mensagem Final**: Ao final, o script informa onde o backup foi salvo e orienta como listar e restaurar o backup.

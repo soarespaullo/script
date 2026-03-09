@@ -30,8 +30,8 @@ O script foi projetado para distribuições baseadas em **Debian/Ubuntu**. Ele p
 
 1. **Clone o repositório ou baixe o script:**
 ```
-   git clone https://github.com/soarespaullo/script.git
-   cd script
+git clone https://github.com/soarespaullo/script.git
+cd script
 ```
 
 2. **Dê permissão de execução:**

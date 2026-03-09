@@ -1,12 +1,46 @@
-# Como Funciona o Script
-**Banner e Cores**: Ao iniciar, o script exibe um banner colorido e informativo, definindo o tom para um backup seguro e automatizado.
+# 🛠️ Interactive Backup Linux Tool
 
-**Verificação do PV**: O script verifica se o utilitário `pv` está instalado e, se não estiver, atualiza os repositórios e instala-o. Essa etapa é vital para a exibição da barra de progresso.
+[![Bash Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)](https://www.gnu.org/software/bash/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+![Version](https://img.shields.io/badge/Version-1.0-blue?style=for-the-badge)
 
-**Entrada Interativa com Auto-Complete**: Utilizando `read -e`, o Bash permite que você use a tecla TAB para auto completar caminhos de diretórios, facilitando a seleção.
+Um script Bash interativo e robusto para automação de backups em sistemas Linux. Desenvolvido para ser simples, seguro e visualmente informativo, ele facilita a rotina de administração de sistemas através de uma interface amigável diretamente no terminal.
 
-**Validações e Criação do Diretório de Destino**: Ele valida se o diretório de origem existe e, se o destino não existir, o cria automaticamente. Em seguida, checa se há espaço disponível suficiente no destino.
+## 🚀 Funcionalidades
 
-**Backup com Barra de Progresso**: Após calcular o tamanho total da origem, o comando `tar` é executado em conjunto com `pv` para exibir uma barra de progresso enquanto o backup é compactado com `gzip`.
+* **Interatividade Total:** Utiliza `read -e` para permitir o uso de **TAB (auto-complete)** ao digitar os caminhos de diretórios.
+* **Barra de Progresso:** Integração nativa com o utilitário `pv` (Pipe Viewer) para exibir o status da compressão em tempo real.
+* **Validações Inteligentes:**
+    * **Check de Origem:** Verifica a existência do diretório antes de iniciar o processo.
+    * **Autocriação de Destino:** Cria o diretório de destino automaticamente caso ele não exista.
+    * **Check de Espaço:** Compara o tamanho da origem com o espaço disponível no destino para evitar falhas por disco cheio.
+* **Compressão Eficiente:** Utiliza `tar` combinado com `gzip` para gerar arquivos `.tar.gz` compactos e datados.
+* **Interface Visual:** Saída personalizada com banners e alertas coloridos para melhor experiência do usuário.
 
-**Mensagem Final**: Ao final, o script informa onde o backup foi salvo e orienta como listar e restaurar o backup.
+## 📋 Requisitos
+
+O script foi projetado para distribuições baseadas em **Debian/Ubuntu**. Ele possui uma função de auto-instalação para a dependência `pv`, mas certifique-se de ter os pacotes base:
+
+- `bash`
+- `tar`
+- `gzip`
+- `pv` (Pipe Viewer)
+
+## ⚙️ Instalação e Uso
+
+1. **Clone o repositório ou baixe o script:**
+```
+   git clone https://github.com/soarespaullo/seu-repositorio.git
+   cd seu-repositorio
+```
+
+2. **Dê permissão de execução:**
+```
+chmod +x backup_linux.sh
+```
+
+3. **Execute o script:**
+
+```
+./backup_linux.sh
+```
